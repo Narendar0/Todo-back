@@ -6,7 +6,9 @@ require('./models/db')
 
 
 app.use(express.json())
-app.use(cors())
+app.use(cors(
+    ["https://todo-app-cap.herokuapp.com/"]
+))
 
 
 app.use('/api/tasks' , router)

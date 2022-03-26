@@ -7,7 +7,7 @@ require('./models/db')
 
 app.use(express.json())
 app.use(cors(
-   { origin : ["https://localhost:8000","https://dashboard.heroku.com/apps/cap-todo-list" ]
+   { origin : ["https://localhost:8000/api","https://dashboard.heroku.com/apps/cap-todo-list" ]
 }
 ))
 

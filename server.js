@@ -7,7 +7,7 @@ require('./models/db')
 
 app.use(express.json())
 app.use(cors(
- {
+  {
       origin:"*"
   }
 ))
@@ -15,7 +15,7 @@ app.use(cors(
 
 app.use('/api/tasks' , router)
 
-app.listen('8000' , err => { 
+app.listen(process.env.PORT ||'8000' , err => { 
     if(err) console.log(err)
     console.log('Server is Running at PORT number : 8000')
 })
